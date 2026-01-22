@@ -1,1 +1,12 @@
 Documentación del proyecto
+
+
+Desarrollo de una aplicación web de gestión de eventos con sistema de venta de entradas
+
+RESUMEN:
+El presente proyecto consiste en el desarrollo de una aplicación web destinada a la gestión de eventos y la venta de entradas de forma online. La aplicación permitirá a los usuarios registrarse, consultar eventos disponibles y adquirir entradas mediante un sistema de pago simulado. Asimismo, los organizadores podrán crear, modificar y eliminar eventos, establecer el número de entradas disponibles y consultar las ventas realizadas.
+La aplicación será desarrollada utilizando tecnologías propias del desarrollo web, como HTML, CSS, JavaScript y Node.js, aplicando una arquitectura cliente-servidor y siguiendo buenas prácticas de programación. El objetivo es ofrecer una plataforma funcional, intuitiva y accesible desde cualquier dispositivo con conexión a internet.
+
+JUSTIFICACIÓN:
+La gestión de eventos y la venta de entradas a través de plataformas web es una práctica cada vez más extendida, ya que facilita la organización y mejora la experiencia de los usuarios. Este proyecto surge con el objetivo de desarrollar una aplicación web que centralice estas funciones en un único sistema sencillo y eficiente.
+Desde el punto de vista académico, este proyecto permite aplicar los conocimientos adquiridos durante el ciclo formativo de Desarrollo de Aplicaciones Web, tales como el diseño de interfaces, el desarrollo de aplicaciones web dinámicas, la gestión de bases de datos y la implementación de un backend con Node.js. Además, la inclusión de un sistema de compra de entradas con pago simulado.
