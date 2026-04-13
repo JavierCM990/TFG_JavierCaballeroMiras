@@ -1,0 +1,73 @@
+body {
+  padding-top: 70px;
+}
+
+/* ── HERO ── */
+.seccion-hero {
+  background-color: whitesmoke;
+  padding: 60px 0 40px;
+}
+
+.hero-titulo {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: black;
+}
+
+.buscador-card {
+  max-width: 800px;
+}
+
+/* ── CARRUSEL ── */
+.seccion-carrusel {
+  background-color: whitesmoke;
+  padding: 0 0 50px;
+}
+
+.carrusel-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+/* ── CATEGORÍAS ── */
+.seccion-categorias {
+  background-color: whitesmoke;
+}
+
+.categoria-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoria-link img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.categoria-link span {
+  display: block;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.categoria-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
