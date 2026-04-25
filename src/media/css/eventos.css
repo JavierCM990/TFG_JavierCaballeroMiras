@@ -1,0 +1,262 @@
+/*//////////////////////////
+///////*  EVENTOS ////////*/
+/*//////////////////////////
+
+/* ── CABECERA PÁGINAS INTERIORES ── */
+.cabecera-pagina {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 100px 0 30px;
+}
+
+/* ── FILTROS ── */
+.filtros-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 90px;
+}
+
+/* ── TARJETAS EVENTO ── */
+.tarjeta-evento {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-evento:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  color: inherit;
+}
+
+.tarjeta-img-wrap {
+  position: relative;
+}
+
+.tarjeta-img-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.tarjeta-categoria {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffc107;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tarjeta-body {
+  padding: 16px;
+}
+
+.tarjeta-titulo {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.tarjeta-info {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.tarjeta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.tarjeta-precio {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+/*//////////////////////////
+///////*  EVENTO /////////*/
+/*//////////////////////////
+
+/* ── DETALLE EVENTO ── */
+.evento-img-wrap {
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.evento-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.evento-img-wrap:hover .evento-img {
+  transform: scale(1.03);
+}
+
+.evento-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.evento-img-wrap:hover .evento-img-overlay {
+  opacity: 1;
+}
+
+.evento-img-overlay i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* INFO GRID */
+.evento-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.evento-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.evento-info-item i {
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+/* DESCRIPCIÓN */
+.evento-descripcion {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* PANEL COMPRA */
+.panel-compra {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  position: sticky;
+  top: 90px;
+}
+
+/* TIPOS DE ENTRADA */
+.tipo-entrada-opcion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.tipo-entrada-opcion input[type="radio"] {
+  display: none;
+}
+
+.tipo-entrada-opcion:has(input:checked) {
+  border-color: #ffc107;
+  background: #fffbf0;
+}
+
+.tipo-entrada-opcion:has(input:checked) .check-icon {
+  display: block !important;
+}
+
+.check-icon {
+  display: none;
+  margin-left: auto;
+  font-size: 1.2rem;
+}
+
+.tipo-entrada-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tipo-nombre {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.tipo-precio {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* SELECTOR CANTIDAD */
+.cantidad-selector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 6px;
+}
+
+.btn-cantidad {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #ffc107;
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.btn-cantidad:hover {
+  background: #ffc107;
+}
+
+#cantidad-valor {
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* RESUMEN */
+.resumen-compra {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px;
+}
