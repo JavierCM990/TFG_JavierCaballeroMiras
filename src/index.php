@@ -54,22 +54,22 @@
       <div id="heroCarousel" class="carousel slide rounded-3 overflow-hidden shadow-lg" data-bs-ride="carousel" data-bs-interval="3500">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/img/futbol.jpg" class="carrusel-img" alt="Fútbol">
+            <img src="media/img/futbol.jpg" class="carrusel-img" alt="Fútbol">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/baloncesto.jpg" class="carrusel-img" alt="Baloncesto">
+            <img src="media/img/baloncesto.jpg" class="carrusel-img" alt="Baloncesto">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/boxeo.webp" class="carrusel-img" alt="Boxeo">
+            <img src="media/img/boxeo.webp" class="carrusel-img" alt="Boxeo">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/concierto.jpg" class="carrusel-img" alt="Conciertos">
+            <img src="media/img/concierto.jpg" class="carrusel-img" alt="Conciertos">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/teatro.jpg" class="carrusel-img" alt="Teatro">
+            <img src="media/img/teatro.jpg" class="carrusel-img" alt="Teatro">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/monstertruck.jpg" class="carrusel-img" alt="Monster Truck">
+            <img src="media/img/monstertruck.jpg" class="carrusel-img" alt="Monster Truck">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -97,42 +97,42 @@
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=futbol" class="categoria-link">
-            <img src="assets/img/futbol.jpg" alt="Fútbol">
+            <img src="media/img/futbol.jpg" alt="Fútbol">
             <span><i class="bi bi-dribbble me-1"></i>Fútbol</span>
           </a>
         </div>
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=baloncesto" class="categoria-link">
-            <img src="assets/img/baloncesto.jpg" alt="Baloncesto">
+            <img src="media/img/baloncesto.jpg" alt="Baloncesto">
             <span><i class="bi bi-dribbble me-1"></i>Baloncesto</span>
           </a>
         </div>
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=boxeo" class="categoria-link">
-            <img src="assets/img/boxeo.webp" alt="Boxeo">
+            <img src="media/img/boxeo.webp" alt="Boxeo">
             <span><i class="bi bi-trophy me-1"></i>Boxeo</span>
           </a>
         </div>
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=concierto" class="categoria-link">
-            <img src="assets/img/concierto.jpg" alt="Conciertos">
+            <img src="media/img/concierto.jpg" alt="Conciertos">
             <span><i class="bi bi-music-note-beamed me-1"></i>Conciertos</span>
           </a>
         </div>
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=teatro" class="categoria-link">
-            <img src="assets/img/teatro.jpg" alt="Teatro">
+            <img src="media/img/teatro.jpg" alt="Teatro">
             <span><i class="bi bi-camera-reels me-1"></i>Teatro</span>
           </a>
         </div>
 
         <div class="col-6 col-md-2">
           <a href="eventos.php?categoria=monster-truck" class="categoria-link">
-            <img src="assets/img/monstertruck.jpg" alt="Monster Truck">
+            <img src="media/img/monstertruck.jpg" alt="Monster Truck">
             <span><i class="bi bi-truck me-1"></i>Monster Truck</span>
           </a>
         </div>

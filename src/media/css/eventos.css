@@ -48,18 +48,6 @@
   display: block;
 }
 
-.tarjeta-categoria {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ffc107;
-  color: #1a1a1a;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
 .tarjeta-body {
   padding: 16px;
 }

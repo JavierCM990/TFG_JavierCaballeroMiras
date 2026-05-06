@@ -1,0 +1,78 @@
+.tarjeta-contacto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.error-campo {
+  color: #dc3545;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.input-group .form-control:focus,
+.input-group .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25);
+}
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25);
+}
+
+/* INFO ITEMS */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-icono {
+  width: 42px;
+  height: 42px;
+  background: #fff9e6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffc107;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* REDES SOCIALES */
+.btn-red-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-red-social:hover {
+  background: #ffc107;
+  color: #1a1a1a;
+}
+
+/* ALERTA ÉXITO */
+.alerta-exito {
+  background: #d1e7dd;
+  color: #0a3622;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-weight: 500;
+}

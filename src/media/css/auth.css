@@ -1,0 +1,40 @@
+.cuerpo-auth {
+  background-color: #f1f3f5;
+  min-height: 100vh;
+}
+
+.contenedor-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px 60px;
+}
+
+.tarjeta-auth {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+
+.error-campo {
+  color: #dc3545;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.input-group .form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25);
+}
+
+.input-group-text {
+  border-right: 0;
+}
+
+.form-control {
+  border-left: 0;
+}

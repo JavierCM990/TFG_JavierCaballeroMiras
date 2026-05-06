@@ -110,7 +110,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="futbol" data-precio="45" data-fecha="2026-05-15">
                         <a href="evento.php?id=1" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/futbol.jpg" alt="Fútbol">
+                                <img src="media/img/futbol.jpg" alt="Fútbol">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">Real Madrid vs FC Barcelona</h6>
@@ -127,7 +127,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="concierto" data-precio="65" data-fecha="2026-05-22">
                         <a href="evento.php?id=2" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/concierto.jpg" alt="Concierto">
+                                <img src="media/img/concierto.jpg" alt="Concierto">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">Bad Bunny — World Tour</h6>
@@ -144,7 +144,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="baloncesto" data-precio="30" data-fecha="2026-06-01">
                         <a href="evento.php?id=3" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/baloncesto.jpg" alt="Baloncesto">
+                                <img src="media/img/baloncesto.jpg" alt="Baloncesto">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">Real Madrid vs Barça — ACB</h6>
@@ -161,7 +161,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="teatro" data-precio="35" data-fecha="2026-06-08">
                         <a href="evento.php?id=4" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/teatro.jpg" alt="Teatro">
+                                <img src="media/img/teatro.jpg" alt="Teatro">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">El Rey León — Musical</h6>
@@ -178,7 +178,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="boxeo" data-precio="50" data-fecha="2026-06-20">
                         <a href="evento.php?id=5" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/boxeo.webp" alt="Boxeo">
+                                <img src="media/img/boxeo.webp" alt="Boxeo">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">Velada del Año IV</h6>
@@ -195,7 +195,7 @@
                     <div class="col-sm-6 col-xl-4 tarjeta-wrap" data-categoria="monster-truck" data-precio="25" data-fecha="2026-07-05">
                         <a href="evento.php?id=6" class="tarjeta-evento">
                             <div class="tarjeta-img-wrap">
-                                <img src="assets/img/monstertruck.jpg" alt="Monster Truck">
+                                <img src="media/img/monstertruck.jpg" alt="Monster Truck">
                             </div>
                             <div class="tarjeta-body">
                                 <h6 class="tarjeta-titulo">Monster Jam — Spain Tour</h6>
