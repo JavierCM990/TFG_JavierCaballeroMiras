@@ -1,0 +1,82 @@
+/* MENÚ ADMIN */
+.menu-admin {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0;
+}
+
+.menu-admin-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s;
+}
+
+.menu-admin-item:hover {
+  color: #1a1a1a;
+}
+
+.menu-admin-item.activo {
+  color: #1a1a1a;
+  border-bottom-color: #ffc107;
+}
+
+/* TARJETA */
+.tarjeta-admin {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* TABLA */
+.tabla-cabecera th {
+  background: #f8f9fa;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #555;
+  border: none;
+}
+
+.tabla-img {
+  width: 50px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ESTADOS */
+.estado-confirmado {
+  background: #d1e7dd;
+  color: #0a3622;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.estado-pendiente {
+  background: #fff3cd;
+  color: #664d03;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.error-campo {
+  color: #dc3545;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25);
+}
