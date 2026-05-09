@@ -1,4 +1,3 @@
-// ── UTILIDADES ──
 function validarCorreo(correo) {
   return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(correo);
 }
@@ -13,7 +12,7 @@ function validarContrasena(contrasena) {
   );
 }
 
-// ── MOSTRAR/OCULTAR CONTRASEÑA ──
+// Mostrar/ocultar contraseña
 const botonMostrar = document.getElementById('mostrar-contrasena');
 if (botonMostrar) {
   botonMostrar.addEventListener('click', function () {
@@ -29,7 +28,7 @@ if (botonMostrar) {
   });
 }
 
-// ── FORTALEZA DE CONTRASEÑA (solo registro) ──
+// Fortaleza de contraseña
 const campoCont = document.getElementById('contrasena');
 const barraFortaleza = document.getElementById('barra-fortaleza');
 const textoFortaleza = document.getElementById('texto-fortaleza');
@@ -60,11 +59,10 @@ if (campoCont && barraFortaleza) {
   });
 }
 
-// ── VALIDACIÓN LOGIN ──
+// Validación login
 const formularioLogin = document.getElementById('formulario-login');
 if (formularioLogin) {
   formularioLogin.addEventListener('submit', function (e) {
-    e.preventDefault();
     let valido = true;
 
     document.getElementById('error-correo').textContent = '';
@@ -74,7 +72,7 @@ if (formularioLogin) {
     const contrasena = document.getElementById('contrasena').value;
 
     if (!validarCorreo(correo)) {
-      document.getElementById('error-correo').textContent = 'Introduce un correo válido (ej: nombre@dominio.com).';
+      document.getElementById('error-correo').textContent = 'Introduce un correo válido.';
       valido = false;
     }
     if (!validarContrasena(contrasena)) {
@@ -82,17 +80,14 @@ if (formularioLogin) {
       valido = false;
     }
 
-    if (valido) {
-      alert('Formulario correcto — pendiente de conectar con PHP');
-    }
+    if (!valido) e.preventDefault();
   });
 }
 
-// ── VALIDACIÓN REGISTRO ──
+// Validación registro
 const formularioRegistro = document.getElementById('formulario-registro');
 if (formularioRegistro) {
   formularioRegistro.addEventListener('submit', function (e) {
-    e.preventDefault();
     let valido = true;
 
     const errores = ['nombre', 'apellidos', 'correo', 'contrasena', 'contrasena2', 'terminos'];
@@ -117,7 +112,7 @@ if (formularioRegistro) {
       valido = false;
     }
     if (!validarCorreo(correo)) {
-      document.getElementById('error-correo').textContent = 'Introduce un correo válido (ej: nombre@dominio.com).';
+      document.getElementById('error-correo').textContent = 'Introduce un correo válido.';
       valido = false;
     }
     if (!validarContrasena(contrasena)) {
@@ -133,8 +128,6 @@ if (formularioRegistro) {
       valido = false;
     }
 
-    if (valido) {
-      alert('Formulario correcto — pendiente de conectar con PHP');
-    }
+    if (!valido) e.preventDefault();
   });
 }
