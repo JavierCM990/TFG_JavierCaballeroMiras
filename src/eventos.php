@@ -1,7 +1,6 @@
 <?php
 include 'comun/db.php';
 
-// Obtener todos los eventos
 $consulta = $conexion->query("SELECT * FROM eventos ORDER BY fecha ASC");
 $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
 ?>
@@ -81,11 +80,6 @@ $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
                             <input type="date" id="fecha-hasta" class="form-control">
                         </div>
 
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold">Precio máximo: <span id="precio-valor" class="text-warning fw-bold">150€</span></label>
-                            <input type="range" class="form-range" min="0" max="300" value="150" id="precio-range">
-                        </div>
-
                         <button id="btn-limpiar" class="btn btn-outline-secondary w-100">Limpiar filtros</button>
 
                     </div>
@@ -104,7 +98,6 @@ $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
                     </div>
 
                     <div class="row g-4" id="lista-eventos">
-
                         <?php foreach ($eventos as $evento): ?>
                             <div class="col-sm-6 col-xl-4 tarjeta-wrap"
                                 data-categoria="<?php echo $evento['categoria']; ?>"
@@ -126,7 +119,6 @@ $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
                                 </a>
                             </div>
                         <?php endforeach; ?>
-
                     </div>
 
                     <div id="sin-resultados" class="text-center py-5 d-none">
@@ -142,7 +134,7 @@ $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
     <?php include 'comun/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="media/js/eventos.js"></script>
+    <script src="media/js/eventos.js?v=4"></script>
 </body>
 
 </html>

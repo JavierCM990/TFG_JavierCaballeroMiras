@@ -26,7 +26,7 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
       <ul class="navbar-nav align-items-center">
         <?php if (isset($_SESSION['usuario_id'])): ?>
           <li class="nav-item">
-            <a class="nav-link" href="/TFG_JavierCaballeroMiras/src/mi-cuenta.php">
+            <a class="nav-link" href="/TFG_JavierCaballeroMiras/src/miCuenta.php">
               <i class="bi bi-person-circle me-1"></i><?php echo $_SESSION['usuario_nombre']; ?>
             </a>
           </li>

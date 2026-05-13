@@ -1,5 +1,5 @@
 .cuerpo-auth {
-  background-color: #f1f3f5;
+  background-color: whitesmoke;
 }
 
 .contenedor-auth {
@@ -10,7 +10,7 @@
 }
 
 .tarjeta-auth {
-  background: #fff;
+  background: white;
   border-radius: 16px;
   padding: 40px;
   width: 100%;
@@ -28,12 +28,4 @@
 .input-group .form-control:focus {
   border-color: #ffc107;
   box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25);
-}
-
-.input-group-text {
-  border-right: 0;
-}
-
-.form-control {
-  border-left: 0;
 }

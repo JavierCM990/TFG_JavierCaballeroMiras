@@ -1,6 +1,6 @@
 /* MENÚ LATERAL */
 .menu-cuenta {
-  background: #fff;
+  background: white;
   border-radius: 12px;
   padding: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -17,7 +17,7 @@
 }
 
 .menu-cuenta-item:hover {
-  background: #f8f9fa;
+  background: white;
   color: #1a1a1a;
 }
 
@@ -30,7 +30,7 @@
 
 /* TARJETA */
 .tarjeta-cuenta {
-  background: #fff;
+  background: white;
   border-radius: 12px;
   padding: 28px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -38,7 +38,7 @@
 
 /* TABLA */
 .tabla-cabecera th {
-  background: #f8f9fa;
+  background: white;
   font-weight: 700;
   font-size: 0.85rem;
   color: #555;

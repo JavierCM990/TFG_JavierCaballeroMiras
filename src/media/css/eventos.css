@@ -2,16 +2,9 @@
 ///////*  EVENTOS ////////*/
 /*//////////////////////////
 
-/* ── CABECERA PÁGINAS INTERIORES ── */
-.cabecera-pagina {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 100px 0 30px;
-}
-
 /* ── FILTROS ── */
 .filtros-panel {
-  background: #fff;
+  background: white;
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -26,7 +19,7 @@
   color: inherit;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: white;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -56,7 +49,7 @@
   font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  color: black;
 }
 
 .tarjeta-info {
@@ -71,12 +64,12 @@
   align-items: center;
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid whitesmoke;
 }
 
 .tarjeta-precio {
   font-weight: 700;
-  color: #1a1a1a;
+  color: black;
   font-size: 0.95rem;
 }
 

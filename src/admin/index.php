@@ -44,6 +44,7 @@ $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
       <div class="menu-admin mb-4">
         <a href="index.php" class="menu-admin-item activo">Eventos</a>
         <a href="ventas.php" class="menu-admin-item">Ventas</a>
+        <a href="mensajes.php" class="menu-admin-item">Mensajes</a>
       </div>
 
       <div class="tarjeta-admin">

@@ -2,7 +2,6 @@ function validarCorreo(correo) {
   return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(correo);
 }
 
-// Contador de caracteres del mensaje
 const mensaje = document.getElementById('mensaje');
 const contador = document.getElementById('contador-caracteres');
 
@@ -15,12 +14,9 @@ mensaje.addEventListener('input', function () {
   }
 });
 
-// Validación y envío
 const formulario = document.getElementById('formulario-contacto');
-const mensajeExito = document.getElementById('mensaje-exito');
 
 formulario.addEventListener('submit', function (e) {
-  e.preventDefault();
   let valido = true;
 
   const errores = ['nombre', 'correo', 'asunto', 'mensaje'];
@@ -50,10 +46,5 @@ formulario.addEventListener('submit', function (e) {
     valido = false;
   }
 
-  if (valido) {
-    formulario.reset();
-    contador.textContent = '0';
-    mensajeExito.classList.remove('d-none');
-    setTimeout(() => mensajeExito.classList.add('d-none'), 5000);
-  }
+  if (!valido) e.preventDefault();
 });
