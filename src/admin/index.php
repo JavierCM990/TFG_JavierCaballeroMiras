@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
+    header('Location: ../index.php');
+    exit();
+}
+
+include '../comun/db.php';
+
+$consulta = $conexion->query("SELECT * FROM eventos ORDER BY fecha ASC");
+$eventos = $consulta->fetch_all(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,13 +41,11 @@
 
     <div class="container my-5">
 
-      <!-- MENÚ ADMIN -->
       <div class="menu-admin mb-4">
         <a href="index.php" class="menu-admin-item activo">Eventos</a>
         <a href="ventas.php" class="menu-admin-item">Ventas</a>
       </div>
 
-      <!-- TABLA EVENTOS -->
       <div class="tarjeta-admin">
         <div class="table-responsive">
           <table class="table table-hover align-middle">
@@ -49,102 +60,24 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($eventos as $evento): ?>
               <tr>
                 <td>
                   <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/futbol.jpg" class="tabla-img" alt="Fútbol">
-                    <span class="fw-semibold">Real Madrid vs FC Barcelona</span>
+                    <img src="../media/img/<?php echo $evento['imagen']; ?>" class="tabla-img" alt="<?php echo $evento['nombre']; ?>">
+                    <span class="fw-semibold"><?php echo $evento['nombre']; ?></span>
                   </div>
                 </td>
-                <td>Fútbol</td>
-                <td>15 Mayo 2026</td>
-                <td>243</td>
-                <td>Desde 25€</td>
+                <td><?php echo ucfirst($evento['categoria']); ?></td>
+                <td><?php echo date('d M Y', strtotime($evento['fecha'])); ?></td>
+                <td><?php echo $evento['entradas_disponibles']; ?></td>
+                <td>Desde <?php echo $evento['precio_general']; ?>€</td>
                 <td>
-                  <a href="editar-evento.php?id=1" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                  <a href="editarEvento.php?id=<?php echo $evento['id']; ?>" class="btn btn-sm btn-outline-warning me-1">Editar</a>
+                  <a href="eliminarEvento.php?id=<?php echo $evento['id']; ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('¿Seguro que quieres eliminar este evento?')">Eliminar</a>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/concierto.jpg" class="tabla-img" alt="Concierto">
-                    <span class="fw-semibold">Bad Bunny — World Tour</span>
-                  </div>
-                </td>
-                <td>Concierto</td>
-                <td>22 Mayo 2026</td>
-                <td>180</td>
-                <td>Desde 65€</td>
-                <td>
-                  <a href="editar-evento.php?id=2" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/baloncesto.jpg" class="tabla-img" alt="Baloncesto">
-                    <span class="fw-semibold">Real Madrid vs Barça — ACB</span>
-                  </div>
-                </td>
-                <td>Baloncesto</td>
-                <td>1 Junio 2026</td>
-                <td>320</td>
-                <td>Desde 30€</td>
-                <td>
-                  <a href="editar-evento.php?id=3" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/teatro.jpg" class="tabla-img" alt="Teatro">
-                    <span class="fw-semibold">El Rey León — Musical</span>
-                  </div>
-                </td>
-                <td>Teatro</td>
-                <td>8 Junio 2026</td>
-                <td>150</td>
-                <td>Desde 35€</td>
-                <td>
-                  <a href="editar-evento.php?id=4" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/boxeo.webp" class="tabla-img" alt="Boxeo">
-                    <span class="fw-semibold">Velada del Año IV</span>
-                  </div>
-                </td>
-                <td>Boxeo</td>
-                <td>20 Junio 2026</td>
-                <td>500</td>
-                <td>Desde 50€</td>
-                <td>
-                  <a href="editar-evento.php?id=5" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="../media/img/monstertruck.jpg" class="tabla-img" alt="Monster Truck">
-                    <span class="fw-semibold">Monster Jam — Spain Tour</span>
-                  </div>
-                </td>
-                <td>Monster Truck</td>
-                <td>5 Julio 2026</td>
-                <td>400</td>
-                <td>Desde 25€</td>
-                <td>
-                  <a href="editar-evento.php?id=6" class="btn btn-sm btn-outline-warning me-1">Editar</a>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

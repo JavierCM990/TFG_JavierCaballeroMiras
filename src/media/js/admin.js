@@ -54,8 +54,7 @@ if (formularioEvento) {
     }
 
     if (valido) {
-      alert('Evento guardado — pendiente de conectar con PHP');
-      window.location.href = 'index.php';
+      formularioEvento.submit();
     }
   });
 }

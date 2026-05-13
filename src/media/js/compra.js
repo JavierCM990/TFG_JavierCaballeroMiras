@@ -3,7 +3,6 @@ function validarCorreo(correo) {
 }
 
 document.getElementById('formulario-pago').addEventListener('submit', function (e) {
-  e.preventDefault();
   let valido = true;
 
   const campos = ['nombre', 'correo', 'numero-tarjeta', 'caducidad', 'cvv'];
@@ -38,7 +37,5 @@ document.getElementById('formulario-pago').addEventListener('submit', function (
     valido = false;
   }
 
-  if (valido) {
-    window.location.href = 'confirmacion.php';
-  }
+  if (!valido) e.preventDefault();
 });

@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'admin') {
+    header('Location: ../index.php');
+    exit();
+}
+
+include '../comun/db.php';
+
+$consulta = $conexion->query("
+    SELECT compras.*, usuarios.nombre AS nombre_usuario, usuarios.apellidos,
+           eventos.nombre AS nombre_evento
+    FROM compras
+    JOIN usuarios ON compras.usuario_id = usuarios.id
+    JOIN eventos ON compras.evento_id = eventos.id
+    ORDER BY compras.fecha_compra DESC
+");
+$ventas = $consulta->fetch_all(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,13 +43,11 @@
 
     <div class="container my-5">
 
-      <!-- MENÚ ADMIN -->
       <div class="menu-admin mb-4">
         <a href="index.php" class="menu-admin-item">Eventos</a>
         <a href="ventas.php" class="menu-admin-item activo">Ventas</a>
       </div>
 
-      <!-- TABLA VENTAS -->
       <div class="tarjeta-admin">
         <div class="table-responsive">
           <table class="table table-hover align-middle">
@@ -46,46 +64,24 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($ventas as $venta): ?>
               <tr>
-                <td>#00001</td>
-                <td>Javier Caballero</td>
-                <td>Real Madrid vs FC Barcelona</td>
-                <td>General</td>
-                <td>2</td>
-                <td class="fw-semibold">52€</td>
-                <td>10 Abril 2026</td>
-                <td><span class="estado-confirmado">Confirmada</span></td>
+                <td>#<?php echo str_pad($venta['id'], 5, '0', STR_PAD_LEFT); ?></td>
+                <td><?php echo $venta['nombre_usuario'] . ' ' . $venta['apellidos']; ?></td>
+                <td><?php echo $venta['nombre_evento']; ?></td>
+                <td><?php echo ucfirst($venta['tipo_entrada']); ?></td>
+                <td><?php echo $venta['cantidad']; ?></td>
+                <td class="fw-semibold"><?php echo $venta['precio_total']; ?>€</td>
+                <td><?php echo date('d M Y', strtotime($venta['fecha_compra'])); ?></td>
+                <td>
+                  <?php if ($venta['estado'] === 'confirmada'): ?>
+                    <span class="estado-confirmado">Confirmada</span>
+                  <?php else: ?>
+                    <span class="estado-pendiente">Pendiente</span>
+                  <?php endif; ?>
+                </td>
               </tr>
-              <tr>
-                <td>#00002</td>
-                <td>María García</td>
-                <td>Bad Bunny — World Tour</td>
-                <td>VIP</td>
-                <td>1</td>
-                <td class="fw-semibold">120€</td>
-                <td>11 Abril 2026</td>
-                <td><span class="estado-confirmado">Confirmada</span></td>
-              </tr>
-              <tr>
-                <td>#00003</td>
-                <td>Carlos López</td>
-                <td>El Rey León — Musical</td>
-                <td>Preferente</td>
-                <td>3</td>
-                <td class="fw-semibold">135€</td>
-                <td>12 Abril 2026</td>
-                <td><span class="estado-pendiente">Pendiente</span></td>
-              </tr>
-              <tr>
-                <td>#00004</td>
-                <td>Ana Martínez</td>
-                <td>Velada del Año IV</td>
-                <td>General</td>
-                <td>2</td>
-                <td class="fw-semibold">100€</td>
-                <td>13 Abril 2026</td>
-                <td><span class="estado-confirmado">Confirmada</span></td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

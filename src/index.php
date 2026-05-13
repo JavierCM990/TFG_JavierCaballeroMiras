@@ -60,7 +60,7 @@
             <img src="media/img/baloncesto.jpg" class="carrusel-img" alt="Baloncesto">
           </div>
           <div class="carousel-item">
-            <img src="media/img/boxeo.webp" class="carrusel-img" alt="Boxeo">
+            <img src="media/img/boxeo.jpg" class="carrusel-img" alt="Boxeo">
           </div>
           <div class="carousel-item">
             <img src="media/img/concierto.jpg" class="carrusel-img" alt="Conciertos">

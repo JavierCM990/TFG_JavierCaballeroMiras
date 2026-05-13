@@ -189,3 +189,16 @@ if (!$evento) {
                 </div>
                 <div class="modal-body p-2">
                     <img src="media/img/<?php echo $evento['imagen']; ?>"
+                        class="img-fluid w-100 rounded-3" alt="<?php echo $evento['nombre']; ?>">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include 'comun/footer.php'; ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="media/js/evento.js"></script>
+</body>
+
+</html>
